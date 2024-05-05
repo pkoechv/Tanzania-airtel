@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mchakato wa Malipo ya Airtel Money</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://pbs.twimg.com/profile_images/1455869365904199682/F0-zjOQS_400x400.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .payment-steps {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .step {
+            margin-bottom: 10px;
+        }
+        .step-number {
+            font-size: 20px;
+            color: #333;
+            margin-right: 10px;
+        }
+        .step-instruction {
+            color: #666;
+        }
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .instructions {
+            font-style: italic;
+            color: green;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mchakato wa Malipo ya Airtel Money</h1>
+        <div class="payment-steps">
+            <div class="step">
+                <span class="step-number">1.</span>
+                <span class="step-instruction">Bonyeza *185# kwenye simu yako.</span>
+            </div>
+            <div class="step">
+                <span class="step-number">2.</span>
+                <span class="step-instruction">Chagua "Tuma pesa".</span>
+            </div>
+            <div class="step">
+                <span class="step-number">3.</span>
+                <span class="step-instruction">Chagua "Tuma Kwa Nchi nyingine, Kenya".</span>
+            </div>
+            <div class="step">
+                <span class="step-number">5.</span>
+                <span class="step-instruction">Sabu:"Expense".</span>
+            </div>
+            <div class="step">
+                <span class="step-number"></span>
+                <span class="step-instruction">Safaricom Mpesa: 254759139443.</span>
+            </div>
+        </div>
+
+        <!-- Additional instructions for users -->
+        <div class="instructions">
+            <p>Baada ya kufanya malipo, tafadhali bonyeza kitufe cha "Mkamilisho" ili kuthibitisha malipo yako.</p>
+            <p>Kama unahitaji maelezo zaidi au msaada kuhusu jinsi ya kufanya malipo, bonyeza kitufe cha "Pata Msaada".</p>
+        </div>
+
+        <!-- Buttons -->
+        <div class="btn-container">
+            <button class="btn" onclick="sendMessage('Nimefanya malipo kupitia laini ya Airtel')">Mkamilisho</button>
+            <button class="btn" onclick="sendMessage('Nitatuma vipi kutumia laini ya Airtel Tz')">Pata Msaada</button>
+        </div>
+    </div>
+
+    <!-- JavaScript for sending WhatsApp messages -->
+    <script>
+        function sendMessage(message) {
+            var encodedMessage = encodeURIComponent(message);
+            window.location.href = `https://wa.me/254106163844/?text=${encodedMessage}`;
+        }
+    </script>
+</body>
+</html>
